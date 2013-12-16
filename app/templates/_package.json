@@ -1,5 +1,30 @@
 {
-  "name": "package",
+  "preferences": [
+    {
+      "name": "register",
+      "title": "Register",
+      "description": "Register your copy of <%= appname %> today!",
+      "type": "string",
+      "value": ""
+    }
+  ],
+  "permissions": {
+    "private-browsing": true
+  },
+  "name": "<%= _.slugify(appname) %>",
+  "license": "MPL 2.0",
+  "author": "<%= author %>",
+  "icon": "data/icon-48.png",
+  "icon64": "data/icon-64.png",
+  "bugs": {},
+  "amd": {},
+  "repository": {},
   "version": "0.0.0",
-  "dependencies": {}
+  "contributors": [],
+  "fullName": "<%= appname %>",
+  "description": "<%= description %>",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-ssh": "~0.9.1"
+  }
 }
