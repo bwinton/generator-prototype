@@ -21,6 +21,7 @@
   "repository": {},
   "version": "0.0.0",
   "contributors": [],
+  "id": "jid1-<%= _.slugify(appname) %>",
   "fullName": "<%= appname %>",
   "description": "<%= description %>",
   "devDependencies": {
