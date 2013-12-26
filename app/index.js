@@ -30,11 +30,16 @@ PrototypeGenerator.prototype.askFor = function askFor() {
     name: 'micropilot',
     message: 'Would you like to add Micropilot?',
     default: true
+  },{
+    name: 'firefox',
+    message: 'Where is your Firefox located?',
+    default: '/Applications/Local/FirefoxNightly.app'
   }];
 
   this.prompt(prompts, function (props) {
     this.micropilot = props.micropilot;
     this.description = props.description;
+    this.firefox = props.firefox;
     this.author = this.user.git.username + ' <' + this.user.git.email + '>';
     cb();
   }.bind(this));
@@ -59,5 +64,7 @@ PrototypeGenerator.prototype.app = function app() {
 
 PrototypeGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('jshintrc', '.jshintrc');
+  this.template('_gitignore', '.gitignore');
   this.template('_Gruntfile.js', 'Gruntfile.js');
+  this.template('_index.html', 'index.html');
 };

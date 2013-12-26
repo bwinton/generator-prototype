@@ -1,0 +1,4 @@
+<%= _.slugify(appname) %>.xpi
+<%= _.slugify(appname) %>.update.rdf
+.DS_Store
+profile.testing/
